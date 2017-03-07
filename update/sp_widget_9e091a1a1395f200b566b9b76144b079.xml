@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+  var frame = document.getElementById('kc_frame');
+
+	var ifr = document.createElement("IFRAME");
+     // ifr.setAttribute( "src", 'https://integration.rightanswers.com/' );
+	ifr.setAttribute( "src", 'https://www.youtube.com/embed/Jf-hbOou_jo' );
+ifr.setAttribute( "width", c.width );
+      ifr.setAttribute( "height", c.height );
+      ifr.setAttribute( "align", c.align );
+      ifr.setAttribute( "frameBorder", c.border );
+      ifr.setAttribute( "marginHeight", "0" );
+      ifr.setAttribute( "marginWidth", "0" );
+      ifr.setAttribute( "scrolling", c.scrolling );
+      ifr.setAttribute( "id", "mainIframe" );
+	document.getElementById('kc_frame').appendChild(ifr);
+
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link/>
+        <name>Test</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>prashant.parbhane@snc</sys_created_by>
+        <sys_created_on>2017-03-06 20:16:35</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>9e091a1a1395f200b566b9b76144b079</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Test</sys_name>
+        <sys_package display_value="ppo" source="x_snc_ppo">dd10d2561395f200b566b9b76144b090</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="ppo">dd10d2561395f200b566b9b76144b090</sys_scope>
+        <sys_update_name>sp_widget_9e091a1a1395f200b566b9b76144b079</sys_update_name>
+        <sys_updated_by>prashant.parbhane@snc</sys_updated_by>
+        <sys_updated_on>2017-03-06 20:54:42</sys_updated_on>
+        <template><![CDATA[<div>
+<!-- your widget template -->
+  <h1>Prashant Parbhane</h1>
+  <div id="kc_frame"></div>
+</div>]]></template>
+    </sp_widget>
+</record_update>
